@@ -8,7 +8,7 @@ import tempfile
 from sentence_transformers import SentenceTransformer
 from sentence_transformers.models import Pooling, Transformer
 
-from ..pipeline.tokenizer import Tokenizer
+from ..pipeline.jieba_tokenizer import JiebaTokenizer
 
 from .base import Vectors
 from ..models import Models
@@ -102,7 +102,7 @@ class TransformersVectors(Vectors):
 
         # Optional string tokenization
         if self.tokenize and isinstance(text, str):
-            text = Tokenizer.tokenize(text)
+            text = JiebaTokenizer.tokenize(text)
 
         # Transformer models require string input
         if isinstance(text, list):

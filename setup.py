@@ -46,6 +46,7 @@ setup(
         "tqdm>=4.46.0",
         "transformers>=4.4.2",
         "uvicorn>=0.12.1",
+        "jieba>=0.42.1",
     ],
     extras_require={"dev": ["black", "coverage", "pre-commit", "pylint"]},
     classifiers=[
